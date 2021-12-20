@@ -1,8 +1,8 @@
-package BugslifeTeam.BugsLife.models;
+package BugTrackerSystem.defect.models;
 
 public class Defect {
 
-    private Integer id;
+    private Long id;
     private String status;
     private String priority;
     private String severity;
@@ -25,12 +25,12 @@ public class Defect {
         this.environmentType = environmentType;
     }
 
-    public Integer getId() {
+    public Long getId() {
 
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(Long id) {
 
         this.id = id;
     }
