@@ -1,7 +1,15 @@
 package BugTrackerSystem.defect.models;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+@Entity
 public class Defect {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     private String status;
     private String priority;
@@ -13,8 +21,16 @@ public class Defect {
     private String resolutionDesc;
 
     public Defect(){
-
+        this.description = "No description created";
+        this.projectName = "No Project name created";
     }
+
+    public Defect(String priority, String projectName, String description){
+        this.priority = priority;
+        this.projectName = projectName;
+        this.description = description;
+    }
+
 
     public Defect(String status, String priority, String severity, String projectName, String description, String environmentType) {
         this.status = status;
