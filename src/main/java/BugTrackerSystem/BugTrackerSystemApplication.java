@@ -9,7 +9,7 @@ import org.springframework.web.client.RestTemplate;
 
 
 @SpringBootApplication
-public class BugTrackerSystemApplication implements CommandLineRunner {
+public class BugTrackerSystemApplication {
 
 	private static final Logger logger = LoggerFactory.getLogger(BugTrackerSystemApplication.class);
 
@@ -17,10 +17,6 @@ public class BugTrackerSystemApplication implements CommandLineRunner {
 		SpringApplication.run(BugTrackerSystemApplication.class, args);
 	}
 
-	@Override
-	public void run(String... args) throws Exception {
-		RestTemplate restTemplate = new RestTemplate();
 
-	}
 }
 
