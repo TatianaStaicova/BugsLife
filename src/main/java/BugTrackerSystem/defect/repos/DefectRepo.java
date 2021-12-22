@@ -6,11 +6,11 @@ import org.springframework.stereotype.Repository;
 
 import java.util.Optional;
 
-@Repository
-public interface DefectRepo extends JpaRepository<Defect, Long> {
+
+public interface DefectRepo extends JpaRepository<Defect, Integer> {
 
 
-    Optional<Defect> findById();
+    Optional<Defect> findById(Integer id);
     Optional<Defect> findByProjectName(String projectName);
 
 }

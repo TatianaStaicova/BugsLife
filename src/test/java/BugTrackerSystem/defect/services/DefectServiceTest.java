@@ -6,7 +6,10 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
+import org.mockito.ArgumentMatchers;
+import org.mockito.BDDMockito;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
@@ -19,7 +22,7 @@ public class DefectServiceTest {
     private DefectRepo mockDefectRepo;
 
     @Autowired
-    private DefectService defectService;
+    private DefectServiceImp defectServiceImp;
     private Defect emptyDefect;
     private Defect mockDefect;
 
@@ -27,6 +30,7 @@ public class DefectServiceTest {
     public void setUp(){
         emptyDefect = new Defect();
         mockDefect = new Defect("needed", "high", "also high", "Project01", "the awesome description", "this very environmentType");
+
     /*    new Defect(),
                 new Defect("Made up", "Made up","Made up"),
                 new Defect("opened", "low", "also low", "Project22", "the awesome test description", "it's giving office"));*/
@@ -35,10 +39,10 @@ public class DefectServiceTest {
 
     @Test
     @DisplayName("Creation")
-    public void createDefectTest(){
-
+    public void createDefectTest() {
+        BDDMockito.doReturn(mockDefect).when(mockDefectRepo).save(ArgumentMatchers.any());
+        Defect returnWidget = defectServiceImp.createDefect(mockDefect);
     }
-
 
 
 }
