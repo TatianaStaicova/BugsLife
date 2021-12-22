@@ -1,8 +1,9 @@
-package com.tatiana.staicova.BugTrackerSystem.domain.comment.services;
+package BugTrackerSystem.comment.services;
 
+import BugTrackerSystem.comment.exceptions.CommentNotFoundException;
+import BugTrackerSystem.comment.services.CommentService;
 import com.tatiana.staicova.BugTrackerSystem.domain.comment.models.Comment;
 import com.tatiana.staicova.BugTrackerSystem.domain.comment.repos.CommentRepo;
-import com.tatiana.staicova.BugTrackerSystem.exceptions.CommentNotFoundException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,7 +12,7 @@ import org.springframework.stereotype.Service;
 import java.util.Optional;
 
 @Service
-public class CommentServicesImpl implements CommentService{
+public class CommentServicesImpl implements CommentService {
     private static Logger logger = LoggerFactory.getLogger(CommentServicesImpl.class);
 
     private CommentRepo commentRepo;
@@ -30,7 +31,7 @@ public class CommentServicesImpl implements CommentService{
     public Comment changeComment(int id, Comment comment) throws CommentNotFoundException {
         Optional<Comment> commentFound = commentRepo.findById(id);
         if(commentFound.isEmpty()){
-            throw new CommentNotFoundException("Comment does not exists, can not update");
+            throw new CommentNotFoundException("Comment does not exists, can not change");
         }
         Comment savedComment = commentFound.get();
         savedComment.setName(comment.getName());

@@ -1,9 +1,8 @@
-package com.tatiana.staicova.BugTrackerSystem;
+package BugTrackerSystem.comment.services;
 
+import BugTrackerSystem.comment.exceptions.CommentNotFoundException;
 import com.tatiana.staicova.BugTrackerSystem.domain.comment.models.Comment;
 import com.tatiana.staicova.BugTrackerSystem.domain.comment.repos.CommentRepo;
-import com.tatiana.staicova.BugTrackerSystem.domain.comment.services.CommentService;
-import com.tatiana.staicova.BugTrackerSystem.exceptions.CommentNotFoundException;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;

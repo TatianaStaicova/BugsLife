@@ -1,9 +1,9 @@
-package com.tatiana.staicova.BugTrackerSystem.domain.comment.controllers;
+package BugTrackerSystem.comment.controllers;
 
+import BugTrackerSystem.comment.exceptions.CommentNotFoundException;
 import com.tatiana.staicova.BugTrackerSystem.domain.comment.models.Comment;
 import com.tatiana.staicova.BugTrackerSystem.domain.comment.repos.CommentRepo;
 import com.tatiana.staicova.BugTrackerSystem.domain.comment.services.CommentService;
-import com.tatiana.staicova.BugTrackerSystem.exceptions.CommentNotFoundException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -45,17 +45,11 @@ public class CommentController {
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity<?> deleteComment(@PathVariable Integer id) {
-        try {
-            commentService.deleteComment(id);
-            return ResponseEntity
-                    .status(HttpStatus.NO_CONTENT)
-                    .build();
-        } catch (CommentNotFoundException e) {
-            return ResponseEntity
-                    .status(HttpStatus.NOT_FOUND)
-                    .build();
-        }
+    public ResponseEntity<?> deleteComment(@PathVariable Integer id) throws CommentNotFoundException {
+        commentService.deleteComment(id);
+        return ResponseEntity
+                .status(HttpStatus.NO_CONTENT)
+                .build();
     }
 
 
