@@ -1,9 +1,10 @@
 package BugTrackerSystem.comment.controllers;
 
 import BugTrackerSystem.comment.exceptions.CommentNotFoundException;
-import com.tatiana.staicova.BugTrackerSystem.domain.comment.models.Comment;
+import BugTrackerSystem.comment.services.CommentService;
+import BugTrackerSystem.comment.models.models.Comment;
 import com.tatiana.staicova.BugTrackerSystem.domain.comment.repos.CommentRepo;
-import com.tatiana.staicova.BugTrackerSystem.domain.comment.services.CommentService;
+// import com.tatiana.staicova.BugTrackerSystem.domain.comment.services.CommentService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
