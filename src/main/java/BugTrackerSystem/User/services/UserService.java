@@ -8,7 +8,7 @@ public interface UserService {
     User createUser(User user);
     User changeUser(Long id, User user) throws UserNotFoundException;
     boolean deleteUser(Long id) throws UserNotFoundException;
-    User showUserInfo(String user) throws UserNotFoundException;
+    User showUserInfo(Long id) throws UserNotFoundException;
 
 
 

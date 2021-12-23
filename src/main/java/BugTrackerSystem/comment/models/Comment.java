@@ -1,11 +1,5 @@
 package BugTrackerSystem.comment.models;
 
-<<<<<<< HEAD:src/main/java/BugTrackerSystem/comment/models/Comment.java
-package BugTrackerSystem.comment.models;
-=======
-package BugTrackerSystem.comment.models.models;
->>>>>>> e0269826be8c99eca7ab1efcd70c94a4e11517cc:src/main/java/BugTrackerSystem/comment/models/models/Comment.java
-
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;

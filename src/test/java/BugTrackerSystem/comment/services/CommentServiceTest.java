@@ -1,13 +1,9 @@
 package BugTrackerSystem.comment.services;
 
+
 import BugTrackerSystem.comment.exceptions.CommentNotFoundException;
-<<<<<<< HEAD
 import BugTrackerSystem.comment.models.Comment;
 import BugTrackerSystem.comment.repos.CommentRepo;
-=======
-import BugTrackerSystem.comment.models.models.Comment;
-import com.tatiana.staicova.BugTrackerSystem.domain.comment.repos.CommentRepo;
->>>>>>> e0269826be8c99eca7ab1efcd70c94a4e11517cc
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
