@@ -1,8 +1,8 @@
 package BugTrackerSystem.comment.services;
 
 import BugTrackerSystem.comment.exceptions.CommentNotFoundException;
-import com.tatiana.staicova.BugTrackerSystem.domain.comment.models.Comment;
-import com.tatiana.staicova.BugTrackerSystem.domain.comment.repos.CommentRepo;
+import BugTrackerSystem.comment.models.Comment;
+import BugTrackerSystem.comment.repos.CommentRepo;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
@@ -45,7 +45,7 @@ public class CommentServiceTest {
     @DisplayName("Comment Service: Create Comment - Success")
     public void createWidgetTestSuccess(){
         BDDMockito.doReturn(mockResponseComment1).when(mockCommentRepo).save(ArgumentMatchers.any());
-        //?? it not allow me to use create or save method here
+        //?? it not allows me to use create or save method here
         //Comment returnedComment = commentService.save(inputComment);
         //Assertions.assertNotNull(returnedComment, "Comment should not be null");
         //Assertions.assertEquals(returnedComment.getId(),1 );
@@ -68,7 +68,6 @@ public class CommentServiceTest {
     @Test
     @DisplayName("Comment Service: Change Comment - Success")
     public void changeCommentTestSuccess() throws CommentNotFoundException {
-//Do we need message as parameter of new Comment;
         Comment expectedCommentChange = new Comment();
 
         BDDMockito.doReturn(Optional.of(mockResponseComment1)).when(mockCommentRepo).findById(1);

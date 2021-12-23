@@ -1,9 +1,9 @@
 package BugTrackerSystem.comment.controllers;
 
 import BugTrackerSystem.comment.exceptions.CommentNotFoundException;
-import com.tatiana.staicova.BugTrackerSystem.domain.comment.models.Comment;
-import com.tatiana.staicova.BugTrackerSystem.domain.comment.repos.CommentRepo;
-import com.tatiana.staicova.BugTrackerSystem.domain.comment.services.CommentService;
+import BugTrackerSystem.comment.models.Comment;
+import BugTrackerSystem.comment.repos.CommentRepo;
+import BugTrackerSystem.comment.services.CommentService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -27,7 +27,7 @@ public class CommentController {
     @PostMapping("/createComment")
     public ResponseEntity<Comment> createCommentRequest(@RequestBody Comment comment) {
         Comment createComment = commentService.createComment(comment);
-        ResponseEntity<Comment> response = new ResponseEntity<>(createComment, HttpStatus.CREATED);
+        ResponseEntity response = new ResponseEntity(createComment, HttpStatus.CREATED);
         return response;
     }
 

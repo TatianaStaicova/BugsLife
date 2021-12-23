@@ -1,4 +1,4 @@
-package com.tatiana.staicova.BugTrackerSystem.domain.comment.models;
+package BugTrackerSystem.comment.models;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;

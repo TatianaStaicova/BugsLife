@@ -1,6 +1,6 @@
-package com.tatiana.staicova.BugTrackerSystem.domain.comment.repos;
+package BugTrackerSystem.comment.repos;
 
-import com.tatiana.staicova.BugTrackerSystem.domain.comment.models.Comment;
+import BugTrackerSystem.comment.models.Comment;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.Optional;

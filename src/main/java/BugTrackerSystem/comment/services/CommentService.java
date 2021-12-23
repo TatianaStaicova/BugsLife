@@ -1,7 +1,7 @@
 package BugTrackerSystem.comment.services;
 
 import BugTrackerSystem.comment.exceptions.CommentNotFoundException;
-import com.tatiana.staicova.BugTrackerSystem.domain.comment.models.Comment;
+import BugTrackerSystem.comment.models.Comment;
 
 
 public interface CommentService {
