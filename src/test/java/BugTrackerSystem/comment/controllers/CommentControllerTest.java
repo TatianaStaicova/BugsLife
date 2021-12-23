@@ -5,6 +5,7 @@ import BugTrackerSystem.comment.exceptions.CommentNotFoundException;
 import BugTrackerSystem.comment.models.Comment;
 import BugTrackerSystem.comment.repos.CommentRepo;
 import BugTrackerSystem.comment.services.CommentService;
+import BugTrackerSystem.comment.models.Comment;
 import org.hamcrest.core.Is;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
@@ -22,7 +23,7 @@ import org.springframework.test.context.junit.jupiter.SpringExtension;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
-import static java.lang.reflect.Array.get;
+
 import static net.bytebuddy.matcher.ElementMatchers.is;
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.ArgumentMatchers.anyInt;

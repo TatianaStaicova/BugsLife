@@ -3,7 +3,6 @@ package BugTrackerSystem.comment.services;
 import BugTrackerSystem.comment.exceptions.CommentNotFoundException;
 import BugTrackerSystem.comment.models.Comment;
 import BugTrackerSystem.comment.repos.CommentRepo;
-import BugTrackerSystem.comment.services.CommentService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

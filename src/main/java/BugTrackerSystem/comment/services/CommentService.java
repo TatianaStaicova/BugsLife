@@ -3,7 +3,6 @@ package BugTrackerSystem.comment.services;
 import BugTrackerSystem.comment.exceptions.CommentNotFoundException;
 import BugTrackerSystem.comment.models.Comment;
 
-
 public interface CommentService {
 
     Comment createComment(Comment comment);
