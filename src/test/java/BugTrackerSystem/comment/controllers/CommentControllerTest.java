@@ -1,7 +1,7 @@
 package BugTrackerSystem.comment.controllers;
 
 import BugTrackerSystem.comment.services.CommentService;
-import com.tatiana.staicova.BugTrackerSystem.domain.comment.models.Comment;
+import BugTrackerSystem.comment.models.models.Comment;
 import com.tatiana.staicova.BugTrackerSystem.domain.comment.repos.CommentRepo;
 import org.hamcrest.core.Is;
 import org.junit.jupiter.api.BeforeEach;
@@ -18,10 +18,9 @@ import org.springframework.test.context.junit.jupiter.SpringExtension;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
-import static java.lang.reflect.Array.get;
+
 import static net.bytebuddy.matcher.ElementMatchers.is;
 import static org.mockito.ArgumentMatchers.any;
-import static org.springframework.test.web.client.match.MockRestRequestMatchers.content;
 import static org.springframework.test.web.client.match.MockRestRequestMatchers.jsonPath;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 

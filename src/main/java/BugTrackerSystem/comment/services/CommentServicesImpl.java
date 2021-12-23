@@ -1,8 +1,7 @@
 package BugTrackerSystem.comment.services;
 
 import BugTrackerSystem.comment.exceptions.CommentNotFoundException;
-import BugTrackerSystem.comment.services.CommentService;
-import com.tatiana.staicova.BugTrackerSystem.domain.comment.models.Comment;
+import BugTrackerSystem.comment.models.models.Comment;
 import com.tatiana.staicova.BugTrackerSystem.domain.comment.repos.CommentRepo;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
